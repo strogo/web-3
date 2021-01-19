@@ -2,6 +2,7 @@ import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 
 import FilesApp from './components/FilesApp.vue'
+import AllFiles from './views/AllFiles.vue'
 import FileInfoVersions from './components/FileInfoVersions.vue'
 import FileSharingSidebar from './components/FileSharingSidebar.vue'
 import FileLinkSidebar from './components/FileLinkSidebar.vue'
@@ -110,13 +111,13 @@ const routes = [
     path: '',
     redirect: `/${appInfo.id}/list/`,
     components: {
-      app: FilesApp
+      app: AllFiles
     }
   },
   {
     path: '/list/:item?',
     components: {
-      app: FilesApp
+      app: AllFiles
     },
     name: 'files-list',
     meta: {
